@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>ずっと一緒。よくある質問・お問い合わせ</title>
+<meta name="description" content="まめキプ連れ歩きギミック「ずっと一緒。」のよくある質問と、お問い合わせ方法です。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="ずっと一緒。よくある質問・お問い合わせ">
+<meta property="og:description" content="まめキプ連れ歩きギミック「ずっと一緒。」のよくある質問と、お問い合わせ方法です。">
+<meta name="twitter:card" content="summary">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@500;700&family=BIZ+UDPGothic:wght@400;700&family=BIZ+UDGothic&display=swap">
+<style>
+/* Layout: 1 列の読み物（最大 46rem）。見出し → 確認リスト → キーワードで絞れる質問（分類ごと）→ 問い合わせカード → フッター */
+:root {
+  color-scheme: light;
+  --bg: #F2F6F1;
+  --surface: #FFFFFF;
+  --ink: #1C2620;
+  --muted: #5A6960;
+  --line: #D6E1D8;
+  --accent: #2C7653;
+  --accent-ink: #FFFFFF;
+  --accent-soft: #E0EEE5;
+  --note: #855510;
+  --note-soft: #FBF0DC;
+  --font-display: "Zen Maru Gothic", "Hiragino Maru Gothic ProN", "BIZ UDPGothic", sans-serif;
+  --font-body: "BIZ UDPGothic", "Hiragino Sans", "Noto Sans JP", "Yu Gothic", "Meiryo", sans-serif;
+  --font-mono: "BIZ UDGothic", "Osaka-Mono", "MS Gothic", ui-monospace, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #101612; --surface: #172019; --ink: #E3ECE5; --muted: #9AA9A0; --line: #28342C;
+    --accent: #6AC398; --accent-ink: #0D1912; --accent-soft: #1C2B23; --note: #E6B66A; --note-soft: #2A2216;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #101612; --surface: #172019; --ink: #E3ECE5; --muted: #9AA9A0; --line: #28342C;
+  --accent: #6AC398; --accent-ink: #0D1912; --accent-soft: #1C2B23; --note: #E6B66A; --note-soft: #2A2216;
+  color-scheme: dark;
+}
+
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; padding-top: env(safe-area-inset-top, 0px); padding-bottom: env(safe-area-inset-bottom, 0px); }
+[hidden] { display: none !important; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.8;
+  padding-left: max(16px, env(safe-area-inset-left, 0px));
+  padding-right: max(16px, env(safe-area-inset-right, 0px));
+  padding-block: 40px 56px;
+}
+.wrap { max-width: 46rem; margin: 0 auto; display: flex; flex-direction: column; gap: 56px; }
+a { color: var(--accent); text-underline-offset: 3px; }
+a:focus-visible, button:focus-visible, summary:focus-visible, input:focus-visible {
+  outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px;
+}
+h1, h2, h3 { font-family: var(--font-display); text-wrap: balance; margin: 0; line-height: 1.4; }
+h2 { font-size: 1.45rem; font-weight: 700; }
+h3 { font-size: 0.95rem; font-weight: 700; color: var(--muted); letter-spacing: 0.06em; }
+p { margin: 0; }
+
+/* ---- 見出し ---- */
+.hero { display: flex; flex-direction: column; gap: 14px; }
+.eyebrow { font-size: 0.85rem; color: var(--muted); letter-spacing: 0.08em; }
+h1 { font-size: clamp(2rem, 7vw, 2.8rem); font-weight: 700; }
+h1 .sub { display: block; font-size: 0.5em; font-weight: 500; color: var(--muted); margin-top: 4px; }
+.steps { display: flex; gap: 10px; align-items: center; height: 22px; }
+.steps i { display: block; width: 9px; height: 13px; border-radius: 50%; background: var(--accent); }
+.steps i:nth-child(odd) { transform: translateY(-4px) rotate(-12deg); }
+.steps i:nth-child(even) { transform: translateY(4px) rotate(12deg); }
+.steps i:nth-child(1) { opacity: .18; } .steps i:nth-child(2) { opacity: .28; } .steps i:nth-child(3) { opacity: .4; }
+.steps i:nth-child(4) { opacity: .55; } .steps i:nth-child(5) { opacity: .7; } .steps i:nth-child(6) { opacity: .85; }
+.lead { max-width: 38rem; }
+.jump { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.jump a {
+  text-decoration: none; color: var(--ink); background: var(--surface); border: 1px solid var(--line);
+  padding: 6px 14px; border-radius: 999px; font-size: 0.9rem;
+}
+.jump a:hover { border-color: var(--accent); color: var(--accent); }
+
+/* ---- メニューの場所（Unity のメニュー表記） ---- */
+.path {
+  font-family: var(--font-mono); font-size: 0.85em; white-space: nowrap;
+  background: var(--accent-soft); color: var(--ink); padding: 1px 8px; border-radius: 6px;
+}
+.path .sep { color: var(--accent); margin: 0 0.25em; }
+.ui { font-weight: 700; }
+
+/* ---- 確認リスト ---- */
+.section { display: flex; flex-direction: column; gap: 16px; }
+.section > p { color: var(--muted); }
+.checks { list-style: none; margin: 0; padding: 0; display: flex; flex-direction: column; gap: 4px; }
+.checks label { display: flex; gap: 12px; align-items: flex-start; padding: 8px 0; cursor: pointer; }
+.checks input { width: 20px; height: 20px; margin: 4px 0 0; accent-color: var(--accent); flex: 0 0 auto; }
+.checks input:checked + span { color: var(--muted); }
+
+/* ---- よくある質問 ---- */
+.search { display: flex; flex-direction: column; gap: 6px; }
+.search label { font-size: 0.85rem; color: var(--muted); }
+.search input {
+  width: 100%; font: inherit; color: var(--ink); background: var(--surface);
+  border: 1px solid var(--line); border-radius: 12px; padding: 10px 14px;
+}
+.search input::placeholder { color: var(--muted); opacity: .8; }
+.cats { display: flex; flex-direction: column; gap: 32px; }
+.cat { display: flex; flex-direction: column; gap: 8px; }
+.qa { border-top: 1px solid var(--line); }
+.qa:last-child { border-bottom: 1px solid var(--line); }
+summary {
+  list-style: none; cursor: pointer; display: flex; gap: 12px; align-items: flex-start;
+  padding: 14px 0; font-weight: 700;
+}
+summary::-webkit-details-marker { display: none; }
+summary .q { font-family: var(--font-display); color: var(--accent); flex: 0 0 auto; line-height: 1.8; }
+summary .t { flex: 1 1 auto; min-width: 0; }
+summary::after {
+  content: "+"; flex: 0 0 auto; font-family: var(--font-display); color: var(--muted);
+  width: 1.2em; text-align: center; line-height: 1.8;
+}
+details[open] > summary::after { content: "−"; }
+.a { padding: 0 0 18px 1.75em; display: flex; flex-direction: column; gap: 8px; min-width: 0; }
+.nohit { background: var(--note-soft); color: var(--ink); border-radius: 12px; padding: 12px 16px; }
+
+/* ---- お問い合わせ ---- */
+.contact {
+  background: var(--surface); border: 1px solid var(--line); border-radius: 20px;
+  padding: 28px clamp(18px, 4vw, 32px); display: flex; flex-direction: column; gap: 20px;
+}
+.flow { margin: 0; padding-left: 1.4em; display: flex; flex-direction: column; gap: 6px; }
+.flow li::marker { font-family: var(--font-display); color: var(--accent); font-weight: 700; }
+.shop {
+  align-self: flex-start; display: inline-flex; gap: 8px; align-items: center; text-decoration: none;
+  background: var(--accent); color: var(--accent-ink); padding: 10px 18px; border-radius: 999px; font-weight: 700;
+}
+.shop:hover { filter: brightness(1.06); }
+.tpl { border: 1px solid var(--line); border-radius: 14px; overflow: hidden; min-width: 0; }
+.tpl-head {
+  display: flex; justify-content: space-between; align-items: center; gap: 12px; flex-wrap: wrap;
+  padding: 10px 14px; background: var(--accent-soft); font-size: 0.9rem; font-weight: 700;
+}
+.tpl-head button {
+  font: inherit; font-weight: 700; cursor: pointer; color: var(--accent-ink); background: var(--accent);
+  border: 0; border-radius: 999px; padding: 6px 16px;
+}
+.tpl pre {
+  margin: 0; padding: 14px 16px; font-family: var(--font-mono); font-size: 0.88rem; line-height: 1.9;
+  white-space: pre-wrap; word-break: break-word; overflow-x: auto; color: var(--ink); background: var(--surface);
+}
+.notes { margin: 0; padding-left: 1.2em; display: flex; flex-direction: column; gap: 6px; color: var(--muted); font-size: 0.92rem; }
+.notes strong { color: var(--ink); }
+
+footer { color: var(--muted); font-size: 0.85rem; display: flex; flex-direction: column; gap: 4px; border-top: 1px solid var(--line); padding-top: 20px; }
+footer .links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .jump a, .shop { transition: border-color .15s, color .15s, filter .15s; }
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="hero">
+    <p class="eyebrow">まめキプ連れ歩きギミック</p>
+    <h1>ずっと一緒。<span class="sub">よくある質問・お問い合わせ</span></h1>
+    <div class="steps" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i></div>
+    <p class="lead">困ったときは、まずこのページで探してみてください。解決しないときは、いちばん下の方法で BOOTH からお問い合わせください。</p>
+    <nav class="jump" aria-label="ページ内の移動">
+      <a href="#check">お問い合わせの前に</a>
+      <a href="#faq">よくある質問</a>
+      <a href="#contact">お問い合わせ方法</a>
+    </nav>
+  </header>
+
+  <section class="section" id="check" aria-labelledby="check-h">
+    <h2 id="check-h">お問い合わせの前に</h2>
+    <p>うまくいかないときに多い原因です。当てはまるものがないか、確認してみてください。</p>
+    <ul class="checks">
+      <li><label><input type="checkbox" id="c1"><span>PC 版の VRChat で使っている（Quest・Android・iOS には対応していません）</span></label></li>
+      <li><label><input type="checkbox" id="c2"><span>キプフェル Ver1.2.0 以降／まめひなた Ver1.60 以降を、同じプロジェクトに入れている</span></label></li>
+      <li><label><input type="checkbox" id="c3"><span>VRChat SDK - Avatars 3.7 以上と Modular Avatar 1.10 以上を、VCC で入れている</span></label></li>
+      <li><label><input type="checkbox" id="c4"><span>着せ替えたあと・新しいバージョンを入れたあとに、導入画面の <span class="ui">「更新する」</span> を押した</span></label></li>
+      <li><label><input type="checkbox" id="c5"><span>キプフェル版とまめひなた版を両方入れているときは、同じバージョンどうしにしている</span></label></li>
+      <li><label><input type="checkbox" id="c6"><span>unitypackage のファイル名を、日本語に変えていない</span></label></li>
+    </ul>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-h">
+    <h2 id="faq-h">よくある質問</h2>
+    <div class="search">
+      <label for="q">キーワードで探す</label>
+      <input id="q" type="search" placeholder="例：ピンク、フェイスミラー、アップロード" autocomplete="off">
+    </div>
+    <p class="nohit" id="nohit" hidden>見つかりませんでした。別のことばで探すか、下の「お問い合わせ方法」からご連絡ください。</p>
+
+    <div class="cats">
+      <div class="cat">
+        <h3>導入・インポート</h3>
+        <div>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">unitypackage をインポートできない（Couldn't decompress package と出る）</span></summary>
+            <div class="a"><p>ファイル名を日本語に変えると、Unity が読み込めなくなります。ダウンロードしたときの名前（Pet_Kipfel_Ver〜／Pet_Mamehinata_Ver〜）のままインポートしてください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">導入画面が開かない</span></summary>
+            <div class="a"><p>Unity の上のメニューの <span class="path">Tools<span class="sep">›</span>連れ歩きギミック<span class="sep">›</span>導入する</span> から開けます。</p>
+            <p>メニュー自体が出てこないときは、Console に赤いエラーが出ていないか確認してください。VRChat SDK - Avatars 3.7 以上と Modular Avatar 1.10 以上が、VCC で入っている必要があります。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">「連れていく」にキプフェル・まめひなたが出てこない</span></summary>
+            <div class="a"><p>このギミックには、キプフェル・まめひなた本体は入っていません。同じプロジェクトに、キプフェル Ver1.2.0 以降／まめひなた Ver1.60 以降をインポートしてください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">自分のアバターとして使っている（アップロード済みの）キプフェルを連れていきたい</span></summary>
+            <div class="a"><p>別のプロジェクトで使っている・VRChat にアップロード済みのキプフェル／まめひなたを、そのままインポートして連れていくことには対応していません。</p>
+            <p>同じ衣装を着せたいときは、導入画面の「追加衣装」に、同じ衣装の Prefab を入れてください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">キプフェル版とまめひなた版を両方使いたい</span></summary>
+            <div class="a"><p>両方インポートすると、「連れていく」でどちらも選べます。両方入れるときは、同じバージョンどうしにしてください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">Quest・Android・iOS でも使える？</span></summary>
+            <div class="a"><p>PC 版の VRChat 専用です。Quest・Android・iOS 向けのアバターには対応しておらず、それらで遊んでいる人からは正しく表示されません。</p></div></details>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3>表示・見た目</h3>
+        <div>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">キプフェルがピンク色になる／フェイスミラーに映る</span></summary>
+            <div class="a"><p>Pet_gimmick フォルダを消して入れ直したときや、新しいバージョンを入れたときは、導入画面の <span class="ui">「更新する」</span> を押してください。フェイスミラー用のマテリアルなどが作り直されます。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">衣装の一部やパーティクルが、フェイスミラーに映る</span></summary>
+            <div class="a"><p>ステンシルに対応していないシェーダーの物は、フェイスミラーに映ることがあります（導入画面に表示されます）。lilToon などのシェーダーにすると隠せます。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">表情がおかしい・表示されない</span></summary>
+            <div class="a"><p>キプフェル・まめひなた本体のバージョンが古いと、表情が正しく出ないことがあります。最新版を入れ直してから、導入画面の <span class="ui">「更新する」</span> を押してください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">ほかの人の画面で、位置がずれて見える</span></summary>
+            <div class="a"><p>VRChat の同期のしくみ上、ほかの人の画面では少しずれて見えることがあります（完全には防げません）。止まってから数秒たつと、自分の画面と同じ位置に合わせ直します。</p>
+            <p>それでも直らないときは、Expression Menu の「表示」を一度オフにして、もう一度オンにしてください。位置などがリセットされて、自分のそばに出し直します。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">壁や家具をすり抜ける</span></summary>
+            <div class="a"><p>VRChat のアバターは、ワールドの壁や家具の当たり判定を使えません。そのため、物を通り抜けることがあります。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">Unity のシーンで、ついてくる方のキプフェルが見えない</span></summary>
+            <div class="a"><p>シーンで 2 匹に見えないよう、実際についてくる方（「〇〇_Companion」）はふだん非表示にしています。VRChat では自動で表示されるので、そのままアップロードしてください。</p></div></details>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3>着せ替え</h3>
+        <div>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">着せ替えの方法は？</span></summary>
+            <div class="a"><p>導入すると自分のアバターの中にできる「連れ歩きまめキプ（着せ替え用）」で着せ替えます。</p>
+            <p>導入画面の「デフォルト衣装」で元の服を 着る／脱ぐ を選び、「追加衣装」に着せたい衣装の Prefab をドラッグ＆ドロップします（Setup Outfit は不要です）。着せ替えたら <span class="ui">「更新する」</span> を押してください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">服が二重になる</span></summary>
+            <div class="a"><p>元の服と重ならないよう、着替えるときは「デフォルト衣装」のチェックを外してください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">着せ替えたキプフェルを、別のプロジェクトに移したい</span></summary>
+            <div class="a"><p>導入画面の「着せ替え済みのキプフェルを書き出す…」で書き出し、移す先の「連れていく」の選択から「着せ替え済みのキプフェルを読み込む…」を選びます。</p>
+            <p>移す先にも、キプフェル・まめひなた本体、このギミック、衣装のシェーダー（lilToon など）、Modular Avatar を入れておいてください。衣装のデータには有料の物も含まれるので、人に配らないでください。</p></div></details>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3>アップロード・設定</h3>
+        <div>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">パラメータが多すぎてアップロードできない</span></summary>
+            <div class="a"><p>このギミックは同期パラメータを約 66 bit 使います。アバター全体で 256 bit を超えるとアップロードできません。</p>
+            <p>顔文字・うろうろをオフにすると、それぞれ 3 bit 減らせます（<span class="path">Tools<span class="sep">›</span>連れ歩きギミック<span class="sep">›</span>詳しい設定（上級者向け）</span>）。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">動きや表情を差し替えたい・増やしたい</span></summary>
+            <div class="a"><p>動き（1回だけ・ずっと・放置モーション）と表情は、最初から入っているものを使います。差し替え・追加はできません。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">大きさを変えたい</span></summary>
+            <div class="a"><p>Expression Menu の「大きさ」で変えられます。はじめの身長は <span class="path">Tools<span class="sep">›</span>連れ歩きギミック<span class="sep">›</span>詳しい設定（上級者向け）</span> の「① 大きさ」で変えられます。</p></div></details>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3>更新・外す</h3>
+        <div>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">新しいバージョンに更新したい</span></summary>
+            <div class="a"><p>BOOTH から新しいパッケージをダウンロードしてインポートしたら、必ず導入画面の <span class="ui">「更新する」</span> を押してください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">ギミックを外したい</span></summary>
+            <div class="a"><p>導入画面の <span class="ui">「初期化する」</span> を押してください。完全に消すときは、そのあと Assets/Pet_gimmick を削除します。</p></div></details>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3>利用規約</h3>
+        <div>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">写真・動画・配信に映してもいい？</span></summary>
+            <div class="a"><p>自由です（収益化しているものも含みます）。クレジットの表記は任意です。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">改変してもいい？</span></summary>
+            <div class="a"><p>プログラムの改変は自由です。ただし、改変したものも含めて配布はできません。改変したことによる不具合は、サポートの対象外です。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">友だちに分けてもいい？</span></summary>
+            <div class="a"><p>このギミック（パッケージ・中のファイル・導入して作られたファイル）の再配布・譲渡・転売・共有は禁止です。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">返品・返金はできる？</span></summary>
+            <div class="a"><p>デジタル商品のため、お客様のご都合による返品・返金はお受けできません。不具合はアップデートで対応します。</p></div></details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact" id="contact" aria-labelledby="contact-h">
+    <h2 id="contact-h">お問い合わせ方法</h2>
+    <p>解決しないときは、BOOTH のメッセージで、ショップ「好好MART」あてにお送りください。</p>
+    <ol class="flow">
+      <li>BOOTH にログインする</li>
+      <li>「好好MART」のショップページから、メッセージを送る</li>
+      <li>下のテンプレートをコピーして、分かるところを書いて送る</li>
+    </ol>
+    <a class="shop" href="https://hollowhao.booth.pm/" target="_blank" rel="noopener">好好MART のショップページを開く</a>
+
+    <div class="tpl">
+      <div class="tpl-head"><span>お問い合わせテンプレート</span><button type="button" id="copy">コピー</button></div>
+<pre id="tpl-text">【購入した商品】セット ／ キプフェル ／ まめひなた
+【ギミックのバージョン】Ver（導入画面に表示されています）
+【Unity のバージョン】
+【VRChat SDK のバージョン】
+【Modular Avatar のバージョン】
+【キプフェル・まめひなた本体のバージョン】
+【自分のアバター】
+【困っていること】（何をしたときに、どうなったか）
+【試したこと】
+【Console のエラー】（赤いエラーの文章をコピーして貼り付け）</pre>
+    </div>
+
+    <ul class="notes">
+      <li>お返事まで数日いただくことがあります。届いた順にお返事します。</li>
+      <li><strong>本商品は非公式です</strong>（もち山金魚 様の公式・公認ではありません）。このギミックについて、もち山金魚 様へのお問い合わせはご遠慮ください。</li>
+      <li>改変したことによる不具合は、サポートの対象外です。</li>
+      <li>アップデートなどのお知らせは、X（<a href="https://x.com/hollowhao" target="_blank" rel="noopener">@hollowhao</a>）で行っています。</li>
+    </ul>
+  </section>
+
+  <footer>
+    <p>製作者：ハオ（好好MART）</p>
+    <div class="links">
+      <a href="https://hollowhao.booth.pm/" target="_blank" rel="noopener">BOOTH</a>
+      <a href="https://x.com/hollowhao" target="_blank" rel="noopener">X @hollowhao</a>
+    </div>
+    <p>Ver1.0.0 時点の内容です。</p>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var q = document.getElementById('q');
+  var nohit = document.getElementById('nohit');
+  var cats = Array.prototype.slice.call(document.querySelectorAll('.cat'));
+  function norm(s) { return (s || '').normalize('NFKC').toLowerCase().replace(/\s+/g, ''); }
+  function filter() {
+    var v = norm(q.value);
+    var any = false;
+    cats.forEach(function (c) {
+      var shown = 0;
+      c.querySelectorAll('details').forEach(function (d) {
+        var hit = !v || norm(d.textContent).indexOf(v) >= 0;
+        d.hidden = !hit;
+        if (hit) shown++;
+        if (v && hit && !d.open) { d.open = true; d.dataset.auto = '1'; }
+        if (!v && d.dataset.auto) { d.open = false; delete d.dataset.auto; }
+      });
+      c.hidden = shown === 0;
+      if (shown) any = true;
+    });
+    nohit.hidden = any;
+  }
+  q.addEventListener('input', filter);
+
+  var btn = document.getElementById('copy');
+  var pre = document.getElementById('tpl-text');
+  var timer = null;
+  function say(t, ms) {
+    btn.textContent = t;
+    clearTimeout(timer);
+    timer = setTimeout(function () { btn.textContent = 'コピー'; }, ms);
+  }
+  function selectText() {
+    try {
+      var r = document.createRange(); r.selectNodeContents(pre);
+      var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    } catch (e) {}
+    say('選択しました。コピーしてください', 3500);
+  }
+  btn.addEventListener('click', function () {
+    var text = pre.textContent;
+    if (navigator.clipboard && navigator.clipboard.writeText) {
+      navigator.clipboard.writeText(text).then(function () { say('コピーしました', 2000); }, selectText);
+    } else {
+      selectText();
+    }
+  });
+})();
+</script>
+
+</body>
+</html>
