@@ -226,8 +226,12 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
         <div>
           <details class="qa"><summary><span class="q">Q</span><span class="t">キプフェルがピンク色になる／フェイスミラーに映る</span></summary>
             <div class="a"><p>Pet_gimmick フォルダを消して入れ直したときや、新しいバージョンを入れたときは、導入画面の <span class="ui">「更新する」</span> を押してください。フェイスミラー用のマテリアルなどが作り直されます。</p></div></details>
-          <details class="qa"><summary><span class="q">Q</span><span class="t">衣装の一部やパーティクルが、フェイスミラーに映る</span></summary>
-            <div class="a"><p>ステンシルに対応していないシェーダーの物は、フェイスミラーに映ることがあります（導入画面に表示されます）。lilToon などのシェーダーにすると隠せます。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">衣装がフェイスミラーに映る</span></summary>
+            <div class="a"><p>映るかどうかは、主に着せた衣装の作りで決まります。lilToon・Poiyomi で作られたふつうの衣装なら、基本的には映りません。映ることがあるのは、次のような場合です。</p>
+            <p><strong>ステンシルに対応していないシェーダーの衣装</strong>：ふだんは隠れますが、自分がキプフェル・まめひなたのすぐそばにいる（重なっている）間は映ります。<span class="ui">「更新する」</span> を押したあと、Console に「ステンシル非対応のため、深度で隠します」と出た物がこれにあたります。lilToon などのシェーダーにして <span class="ui">「更新する」</span> を押すと、隠せるようになります。</p>
+            <p><strong>パーティクルなど、メッシュではない物</strong>：シェーダーがステンシルに対応していないと隠せません（導入画面に表示されます）。lilToon などのシェーダーにするか、オフにしてください。</p>
+            <p><strong>衣装のメニューで色などを切り替えるとき</strong>：アニメーションでマテリアルを入れ替える仕組みの物は、切り替えたあとの色が映ります。Modular Avatar の Material Setter・Material Swap で切り替える物は隠れます。</p>
+            <p>VRChat のアップデートのあとで急に映るようになったときは、BOOTH のメッセージでお知らせください。</p></div></details>
           <details class="qa"><summary><span class="q">Q</span><span class="t">表情がおかしい・表示されない</span></summary>
             <div class="a"><p>キプフェル・まめひなた本体のバージョンが古いと、表情が正しく出ないことがあります。最新版を入れ直してから、導入画面の <span class="ui">「更新する」</span> を押してください。</p></div></details>
           <details class="qa"><summary><span class="q">Q</span><span class="t">ほかの人の画面で、位置がずれて見える</span></summary>
