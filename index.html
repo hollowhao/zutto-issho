@@ -214,6 +214,11 @@ footer .links { display: flex; flex-wrap: wrap; gap: 6px 16px; }
           <details class="qa"><summary><span class="q">Q</span><span class="t">自分のアバターとして使っている（アップロード済みの）キプフェルを連れていきたい</span></summary>
             <div class="a"><p>別のプロジェクトで使っている・VRChat にアップロード済みのキプフェル／まめひなたを、そのままインポートして連れていくことには対応していません。</p>
             <p>同じ衣装を着せたいときは、導入画面の「追加衣装」に、同じ衣装の Prefab を入れてください。</p></div></details>
+          <details class="qa"><summary><span class="q">Q</span><span class="t">改変したキプフェル・まめひなたを連れ歩きたい</span></summary>
+            <div class="a"><p>同じプロジェクトのシーンにある、改変したキプフェル／まめひなたを連れていけます。Hierarchy でその子を右クリックし、<span class="ui">「連れ歩きギミック」→「このアバターを連れていく」</span> を選んでください。その子の中に「追加衣装」ができます。そのあと導入画面で <span class="ui">「導入する」</span>（導入済みなら <span class="ui">「更新する」</span>）を押すと反映されます。</p>
+            <p>色変え（マテリアルの差し替え）やシェイプキーの調整は、連れていく子にもそのまま使われます。衣装・髪型・小物を着せ替えるときは、その子の中の「追加衣装」に入れてください。</p>
+            <p>その子の体に直接入っているギミック（アバターの Expression Menu・アニメーションなど）は使われません（「追加衣装」などに入れた衣装に付いている Modular Avatar の部品は使われます）。改変の内容によっては、表情や動きが正しく出ないことがあります。</p>
+            <p>別のプロジェクトからインポートしたもの・VRChat にアップロード済みのアバターを、そのまま連れていくことには対応していません（「自分のアバターとして使っている（アップロード済みの）キプフェルを連れていきたい」をご覧ください）。</p></div></details>
           <details class="qa"><summary><span class="q">Q</span><span class="t">キプフェル版とまめひなた版を両方使いたい</span></summary>
             <div class="a"><p>両方インポートすると、「連れていく」でどちらも選べます。両方入れるときは、同じバージョンどうしにしてください。</p></div></details>
           <details class="qa"><summary><span class="q">Q</span><span class="t">2体以上を同時に連れ歩きたい</span></summary>
